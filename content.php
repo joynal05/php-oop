@@ -18,9 +18,20 @@
 
 <?php 
 if(isset($_POST['cal'])){
-    echo 'yes';
-}else{
-    echo 'no';
-}
 
+    $num1 = isset($_POST['f_num']) && is_numeric($_POST['f_num']) ? $_POST['f_num'] : null;
+    $num2 = isset($_POST['s_num']) && is_numeric($_POST['s_num']) ? $_POST['s_num'] : null;
+
+    if( $num1 == null || $num2 == null ){
+        echo 'please type numbers and submit';
+    }else{
+        echo 'Add = '. ($num1 + $num2).'<br>'  ;
+        echo 'Sub = '. ($num1 - $num2).'<br>'  ;
+        echo 'Multi = '. ($num1 * $num2).'<br>'  ;
+        echo 'Div = '. ($num1 / $num2).'<br>'  ;
+    }
+
+
+    
+}
 
