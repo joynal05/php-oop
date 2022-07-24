@@ -25,10 +25,23 @@ if(isset($_POST['cal'])){
     if( $num1 == null || $num2 == null ){
         echo 'please type numbers and submit';
     }else{
-        echo 'Add = '. ($num1 + $num2).'<br>'  ;
-        echo 'Sub = '. ($num1 - $num2).'<br>'  ;
-        echo 'Multi = '. ($num1 * $num2).'<br>'  ;
-        echo 'Div = '. ($num1 / $num2).'<br>'  ;
+
+
+
+        echo '<hr>'  ;
+        echo 'You added '.$num1.' and '.$num2.' <br> <hr>'  ;
+
+        $cal = new Calculation;
+
+        $cal->add($num1,$num2);
+        $cal->sub($num1,$num2);
+        $cal->mul($num1,$num2);
+        $cal->div($num1,$num2);
+
+
+        
+        
+        
     }
 
 
